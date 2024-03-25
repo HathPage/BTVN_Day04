@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/all_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avt"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/item01"
+        android:padding="2dp"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:strokeColor="#005EFF"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Code toàn bug"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/avt"
+        android:layout_alignTop="@+id/avt"
+        />
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20 thg 2"
+        android:textSize="11sp"
+        android:layout_below="@id/name"
+        android:layout_toEndOf="@+id/avt"
+        />
+    <ImageButton
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/icon_world"
+        android:layout_below="@id/name"
+        android:layout_toEndOf="@id/day"
+        android:contentDescription="Quyền riêng tư" />
+    <TextView
+        android:id="@+id/txt_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" · Theo dõi"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#0010FF"
+        android:layout_alignTop="@+id/name"
+        android:layout_toEndOf="@+id/name"
+        />
+    <ImageButton
+        android:id="@+id/three_dots"
+        android:layout_width="31dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/three_dots"
+        android:layout_alignTop="@+id/name"
+        android:layout_toStartOf="@+id/x_button"
+        android:contentDescription="Cài đặt" />
+
+    <ImageButton
+        android:id="@+id/x_button"
+        android:layout_width="23dp"
+        android:layout_height="20dp"
+        android:background="@drawable/x_button"
+        android:layout_alignTop="@+id/name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitXY"
+        android:contentDescription="Ẩn bài viết" />
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avt"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:text="Cả nhà ơi, \nai muốn được nhận 10% khuyến mãi thì ib ngay nào"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <ImageButton
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="600dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/item01"
+        android:layout_below="@+id/caption"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Ảnh" />
+
+    <ImageButton
+        android:id="@+id/react"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:background="@drawable/react"
+        android:layout_below="@+id/picture"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="Lượt cảm xúc" />
+
+    <TextView
+        android:id="@+id/num_react"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="39"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/react"
+        android:layout_alignTop="@+id/react"
+        />
+
+    <TextView
+        android:id="@+id/num_cmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textStyle="bold"
+        android:layout_marginEnd="3dp"
+        android:layout_toStartOf="@+id/cmt"
+        android:layout_alignTop="@+id/num_react"
+        />
+
+    <TextView
+        android:id="@+id/cmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bình luận"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/num_share"
+        android:layout_alignTop="@+id/num_react"
+        />
+
+
+    <TextView
+        android:id="@+id/num_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textStyle="bold"
+        android:layout_marginEnd="3dp"
+        android:layout_toStartOf="@+id/share"
+        android:layout_alignTop="@+id/num_react"
+        />
+
+    <TextView
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lượt chia sẻ"
+        android:textStyle="bold"
+        android:layout_marginEnd="13dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/num_react"
+        />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/num_view"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="299"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:layout_marginEnd="3dp"-->
+    <!--        android:layout_toStartOf="@+id/view"-->
+    <!--        android:layout_alignTop="@+id/num_react"-->
+    <!--        />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/view"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="lượt xem"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:layout_marginEnd="13dp"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignTop="@+id/num_react"-->
+    <!--        />-->
+
+    <View
+        android:id="@id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignStart="@+id/avt"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="3dp"
+        android:background="#FFD8D8"
+        android:layout_below="@+id/react"
+        />
+
+    <ImageButton
+        android:id="@+id/btn_like"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/line"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/like"
+        android:contentDescription="Lượt thích" />
+
+    <ImageButton
+        android:id="@+id/btn_cmt"
+        android:layout_width="94dp"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@+id/btn_like"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/comment"
+        android:contentDescription="Bình luận" />
+
+    <ImageButton
+        android:id="@+id/btn_share_mess"
+        android:layout_width="94dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/line"
+        android:layout_toStartOf="@+id/btn_share_normal"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/share_mess"
+        android:contentDescription="Gửi đến" />
+
+    <ImageButton
+        android:id="@+id/btn_share_normal"
+        android:layout_width="94dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/line"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/share_normal"
+        android:contentDescription="Chia sẻ" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_marginTop="2dp"
+        android:background="#EDD4D4"
+        android:layout_below="@+id/btn_like"
+        />
+
+</RelativeLayout>
